@@ -3,6 +3,7 @@ import Login from './components/Login.js';
 import Logout from './components/Logout.js';
 import { useEffect } from 'react';
 import { gapi } from 'gapi-script';
+import Bluetooth from './Bluetooth.js';
 
 const clientId = "861812571546-ku3g7ltrpvdpb0d5pj8s7luo6e1672pl.apps.googleusercontent.com";
 
@@ -24,6 +25,7 @@ function App() {
         Login with your Google Account:
         <Login />
         <Logout />
+        <Bluetooth />
       </div>
     </div>
   );
