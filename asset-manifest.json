@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/testind4/static/css/main.61db47db.css",
-    "main.js": "/testind4/static/js/main.3e4d0b83.js",
-    "static/js/787.5fef5853.chunk.js": "/testind4/static/js/787.5fef5853.chunk.js",
-    "index.html": "/testind4/index.html",
-    "main.61db47db.css.map": "/testind4/static/css/main.61db47db.css.map",
-    "main.3e4d0b83.js.map": "/testind4/static/js/main.3e4d0b83.js.map",
-    "787.5fef5853.chunk.js.map": "/testind4/static/js/787.5fef5853.chunk.js.map"
+    "main.css": "/TestBluetoothApp/static/css/main.61db47db.css",
+    "main.js": "/TestBluetoothApp/static/js/main.ebaef494.js",
+    "static/js/787.5fef5853.chunk.js": "/TestBluetoothApp/static/js/787.5fef5853.chunk.js",
+    "index.html": "/TestBluetoothApp/index.html",
+    "main.61db47db.css.map": "/TestBluetoothApp/static/css/main.61db47db.css.map",
+    "main.ebaef494.js.map": "/TestBluetoothApp/static/js/main.ebaef494.js.map",
+    "787.5fef5853.chunk.js.map": "/TestBluetoothApp/static/js/787.5fef5853.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61db47db.css",
-    "static/js/main.3e4d0b83.js"
+    "static/js/main.ebaef494.js"
   ]
 }
