@@ -8,6 +8,7 @@ export default function Bluetooth() {
       try {
         // Request the Bluetooth device through browser
         const device = await navigator.bluetooth.requestDevice({
+          optionalServices: ["battery_service", "device_information"],
           acceptAllDevices: true
         });
 
