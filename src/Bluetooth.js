@@ -6,8 +6,10 @@ export default function Bluetooth() {
   useEffect(() => {
     async function connectBluetoothDevice() {
       try {
-        // Request the Bluetooth device through the browser
-        const device = await requestBluetoothDevice();
+        // Request the Bluetooth device through browser
+        const device = await navigator.bluetooth.requestDevice({
+          acceptAllDevices: true
+        });
 
         // Connect to the GATT server
         // We also get the name of the Bluetooth device here
@@ -23,7 +25,7 @@ export default function Bluetooth() {
         // Convert received buffer to number
         const batteryLevel = await batteryLevelCharacteristic.readValue();
         const batteryPercent = await batteryLevel.getUint8(0);
-        
+
         console.log('is it even entering here ?');
         console.log(deviceName + " has " + batteryPercent);
 
@@ -87,7 +89,7 @@ export default function Bluetooth() {
   return (
     <div>
       <button id="bluetoothButton">Connect Bluetooth Device</button>
-      <div ref={details}></div>
+      <div ref={details} />
     </div>
   );
 }
