@@ -11,8 +11,8 @@ export default function Bluetooth() {
 
         // Connect to the GATT server
         // We also get the name of the Bluetooth device here
-        let deviceName = device.gatt.device.name;
         const server = await device.gatt.connect();
+        let deviceName = device.gatt.device.name;
 
         // Getting the services we mentioned before through the GATT server
         const batteryService = await server.getPrimaryService('battery_service');
