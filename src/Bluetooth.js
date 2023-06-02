@@ -23,6 +23,9 @@ export default function Bluetooth() {
         // Convert received buffer to number
         const batteryLevel = await batteryLevelCharacteristic.readValue();
         const batteryPercent = await batteryLevel.getUint8(0);
+        
+        console.log('is it even entering here ?');
+        console.log(deviceName + " has " + batteryPercent);
 
         // We will get all characteristics from device_information
         const infoCharacteristics = await infoService.getCharacteristics();
@@ -52,28 +55,33 @@ export default function Bluetooth() {
           `;
         });
       } catch (error) {
-        console.error('Error:', error);
+        details.current.innerHTML = 'Error:' + error;
       }
     }
 
     async function requestBluetoothDevice() {
       return new Promise((resolve, reject) => {
-        const button = document.getElementById('bluetoothButton');
-        button.addEventListener('click', async () => {
-          try {
-            const device = await navigator.bluetooth.requestDevice({
-              optionalServices: ['battery_service', 'device_information'],
-              acceptAllDevices: true,
-            });
-            resolve(device);
-          } catch (error) {
-            reject(error);
-          }
-        });
+        resolve(); // Resolve immediately to trigger connection process
       });
     }
 
-    connectBluetoothDevice();
+    const buttonClickHandler = async () => {
+      try {
+        const device = await navigator.bluetooth.requestDevice({
+          optionalServices: ['battery_service', 'device_information'],
+          acceptAllDevices: true,
+        });
+        await connectBluetoothDevice(device);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    document.getElementById('bluetoothButton').addEventListener('click', buttonClickHandler);
+
+    return () => {
+      document.getElementById('bluetoothButton').removeEventListener('click', buttonClickHandler);
+    };
   }, []);
 
   return (
