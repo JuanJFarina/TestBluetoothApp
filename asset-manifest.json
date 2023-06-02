@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/TestBluetoothApp/static/css/main.61db47db.css",
-    "main.js": "/TestBluetoothApp/static/js/main.ebaef494.js",
+    "main.js": "/TestBluetoothApp/static/js/main.c37e4a69.js",
     "static/js/787.5fef5853.chunk.js": "/TestBluetoothApp/static/js/787.5fef5853.chunk.js",
     "index.html": "/TestBluetoothApp/index.html",
     "main.61db47db.css.map": "/TestBluetoothApp/static/css/main.61db47db.css.map",
-    "main.ebaef494.js.map": "/TestBluetoothApp/static/js/main.ebaef494.js.map",
+    "main.c37e4a69.js.map": "/TestBluetoothApp/static/js/main.c37e4a69.js.map",
     "787.5fef5853.chunk.js.map": "/TestBluetoothApp/static/js/787.5fef5853.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61db47db.css",
-    "static/js/main.ebaef494.js"
+    "static/js/main.c37e4a69.js"
   ]
 }
